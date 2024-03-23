@@ -2,7 +2,9 @@ from DataModule import (
     AData,
     Hair,
     StarHouse,
-    AVP
+    AVP,
+    Seveso,
+    Radar
 )
 from DataModule import Coord
 
@@ -12,7 +14,9 @@ class Core:
         self.__datasets: list[AData] = [
             Hair('Hair'),
             StarHouse('StarHouse'),
-            AVP('AVP')
+            AVP('AVP'),
+            Seveso('Seveso'),
+            Radar('Radar')
         ]
 
     def getByCoord(self, vec: dict) -> dict:
