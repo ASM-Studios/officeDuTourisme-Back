@@ -1,11 +1,24 @@
+from .AData import AData
+from .DataSet import DataSet
 import random
+
+class DAE(AData):
+    def __init__(self, filePath: str) -> None:
+        super().__init__(filePath)
+        self.__dataSetType: DataSet = DAEDataSet
+
+    @property
+    def dataSetType(self) -> DataSet:
+        return self.__dataSetType
+
+    def abs(self) -> None:
+        pass
 
 class DAEDataSet(DataSet):
     def __init__(self, distance=None, **kwargs) -> None:
         super().__init__(**kwargs)
-        if distance is not None:
-            self.distance = distance
-        else:
+        self.distance = distance
+        if self.distance is None:
             self.distance = round(random.uniform(0, 30), 2)
 
     @staticmethod
@@ -13,7 +26,9 @@ class DAEDataSet(DataSet):
         return 5
 
     def __str__(self) -> str:
-        distance = round(random.uniform(0, 30), 2)
+        if self.distance is not None:
+            self.distance = random.uniform(0, 30)
+        self.distance = round(random.uniform(0, 30), 2)
         return random.choice([
             "Une DAE est proche, à une distance d'environ " + str(distance) + " kilomètres.",
             "À proximité, vous trouverez une DAE, située à environ " + str(distance) + " kilomètres.",
