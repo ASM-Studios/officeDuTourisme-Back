@@ -25,7 +25,7 @@ class Core:
             AVP('AVP'),
             Blood('Blood'),
             FiveG('FiveG'),
-            Speed('Speed')
+            Speed('Speed'),
             AVP('AVP'),
             Seveso('Seveso'),
             Radar('Radar'),
