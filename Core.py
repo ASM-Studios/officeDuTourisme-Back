@@ -5,7 +5,8 @@ from DataModule import (
     PoopSanctuary,
     AVP,
     Blood,
-    FiveG
+    FiveG,
+    Speed
 )
 from DataModule import Coord
 
@@ -18,7 +19,8 @@ class Core:
             PoopSanctuary('PoopSanctuary'),
             AVP('AVP'),
             Blood('Blood'),
-            FiveG('FiveG')
+            FiveG('FiveG'),
+            Speed('Speed')
         ]
 
     def getByCoord(self, vec: dict) -> dict:
