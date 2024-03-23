@@ -19,7 +19,6 @@ class FiveGDataSet(DataSet):
         super().__init__(**kwargs)
 
     @staticmethod
-    @property
     def points() -> int:
         return 2
 
