@@ -24,7 +24,7 @@ class SpeedDataSet(DataSet):
 
     @staticmethod
     def points() -> int:
-        return 2
+        return 1
 
     def __str__(self) -> str:
         return random.choice([
