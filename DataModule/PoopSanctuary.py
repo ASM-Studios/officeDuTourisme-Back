@@ -6,10 +6,15 @@ class PoopSanctuary(AData):
     def __init__(self, filePath: str) -> None:
         super().__init__(filePath)
         self.__dataSetType: DataSet = PoopSanctuaryDataSet
+        self.__points: int = 4
 
     @property
     def dataSetType(self) -> DataSet:
         return self.__dataSetType
+
+    @property
+    def points(self) -> int:
+        return self.__points
 
     def abs(self) -> None:
         pass
