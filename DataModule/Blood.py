@@ -6,7 +6,7 @@ class Blood(AData):
     def __init__(self, filePath: str) -> None:
         super().__init__(filePath)
         self.__dataSetType: DataSet = BloodDataSet
-        self.__points: int = 4
+        self.__points: int = 2
 
     @property
     def dataSetType(self) -> DataSet:
