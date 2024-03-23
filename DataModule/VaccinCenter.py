@@ -2,10 +2,10 @@ from .AData import AData
 from .DataSet import DataSet
 import math
 
-class Radar(AData):
+class VaccinCenter(AData):
     def __init__(self, filePath: str) -> None:
         super().__init__(filePath)
-        self.__dataSetType: DataSet = RadarDataSet
+        self.__dataSetType: DataSet = VaccinCenterDataSet
 
     @property
     def dataSetType(self) -> DataSet:
@@ -14,7 +14,7 @@ class Radar(AData):
     def abs(self) -> None:
         pass
 
-class RadarDataSet(DataSet):
+class VaccinCenterDataSet(DataSet):
     def __init__(self, **kwargs) -> None:
         super().__init__(**kwargs)
 
@@ -23,4 +23,4 @@ class RadarDataSet(DataSet):
         return 5
 
     def __str__(self) -> str:
-        return "Il y'a un radar à proximité"
+        return "Il y'a un centre de vaccination a proximité"

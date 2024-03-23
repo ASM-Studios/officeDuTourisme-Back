@@ -4,7 +4,9 @@ from DataModule import (
     StarHouse,
     AVP,
     Seveso,
-    Radar
+    Radar,
+    Blood,
+    VaccinCenter
 )
 from DataModule import Coord
 
@@ -16,7 +18,9 @@ class Core:
             StarHouse('StarHouse'),
             AVP('AVP'),
             Seveso('Seveso'),
-            Radar('Radar')
+            Radar('Radar'),
+            Blood('Blood'),
+            VaccinCenter('VaccinCenter')
         ]
 
     def getByCoord(self, vec: dict) -> dict:

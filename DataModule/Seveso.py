@@ -19,7 +19,6 @@ class SevesoDataSet(DataSet):
         super().__init__(**kwargs)
 
     @staticmethod
-    @property
     def points() -> int:
         return 5
 
