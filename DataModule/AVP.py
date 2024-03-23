@@ -12,9 +12,18 @@ class AVP(AData):
     def dataSetType(self) -> DataSet:
         return self.__dataSetType
 
+    @staticmethod
+    @property
+    def points() -> int:
+        return 2
+
 class AVPDataSet(DataSet):
     def __init__(self, **kwargs) -> None:
         super().__init__(**kwargs)
+
+    @staticmethod
+    def points() -> int:
+        return 5
 
     def __str__(self) -> str:
         if not self.__dict__.get("distance"):

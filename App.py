@@ -1,8 +1,12 @@
 from flask import Flask
 from API.Data import api_data
 from Core import Core
+from flask_cors import CORS
 
 app = Flask("office-du-tourisme")
+
+CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 app.register_blueprint(api_data)
 

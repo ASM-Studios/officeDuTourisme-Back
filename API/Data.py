@@ -3,10 +3,9 @@ from typing import Any
 from Core import Core
 
 api_data = Blueprint("api_data", __name__)
-
 data = Core()
 
-@api_data.route(rule="/getByCoordinates", methods=["GET"])
+@api_data.route(rule="/getByCoordinates", methods=["POST"])
 def getByCoordinates() -> Any:
     body: dict = request.get_json()
     if not body.get("coordinates"):
@@ -16,4 +15,10 @@ def getByCoordinates() -> Any:
     if not body["coordinates"].get("lng"):
         return jsonify("Missing lng in coordinates"), 400
 
-    return data.getByCoord(body.get("coordinates"))
+    return {
+        "Coordinares": body.get("coordinates"),
+        "Question": {
+            "type": "QCM",
+            "prompts": data.getByCoord(body.get("coordinates"))
+        }
+    }

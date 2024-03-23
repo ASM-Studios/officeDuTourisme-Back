@@ -17,5 +17,9 @@ class HairDataSet(DataSet):
     def __init__(self, **kwargs) -> None:
         super().__init__(**kwargs)
 
+    @staticmethod
+    def points() -> int:
+        return 5
+
     def __str__(self) -> str:
         return "Il y a un salon de coiffure sobrement nommé " + self.__dict__.get('name') + " ici."

@@ -5,6 +5,7 @@ from DataModule import (
     AVP
 )
 from DataModule import Coord
+import random
 
 
 class Core:
@@ -18,8 +19,10 @@ class Core:
     def getByCoord(self, vec: dict) -> dict:
         valids = []
         unvalids = []
+        total = []
         vec = Coord(float(vec['lng']), float(vec['lat']))
-        [valids.extend(e.extractByCoord(vec)) for e in self.__datasets]
-        [unvalids.extend(e.extractRandom()) for e in self.__datasets]
+        random.shuffle([valids.extend(e.extractByCoord(vec)) for e in self.__datasets])
+        random.shuffle([unvalids.extend(e.extractRandom()) for e in self.__datasets])
         valids.extend(unvalids)
-        return valids
+        random.shuffle(valids)
+        return valids[:(random.randint(4, 7))]
