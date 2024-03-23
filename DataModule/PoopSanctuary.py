@@ -19,4 +19,4 @@ class PoopSanctuaryDataSet(DataSet):
         super().__init__(**kwargs)
 
     def __str__(self) -> str:
-        return "Les toilettes publiques de la métropôle de Lyon les plus proches sont a " + str(self.distance) + "kms. Mastercacass."
+        return "Les toilettes publiques de la métropôle de Lyon les plus proches sont a " + str(self.distance) + " kms. Mastercacass."
