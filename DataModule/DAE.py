@@ -17,9 +17,6 @@ class DAE(AData):
 class DAEDataSet(DataSet):
     def __init__(self, distance=None, **kwargs) -> None:
         super().__init__(**kwargs)
-        self.distance = distance
-        if self.distance is None:
-            self.distance = round(random.uniform(0, 30), 2)
 
     @staticmethod
     def points() -> int:
