@@ -22,7 +22,6 @@ class BloodDataSet(DataSet):
             self.distance = round(random.uniform(0, 30), 2)
 
     @staticmethod
-    @property
     def points() -> int:
         return 5
 
