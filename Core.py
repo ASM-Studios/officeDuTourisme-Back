@@ -3,7 +3,8 @@ from DataModule import (
     Hair,
     StarHouse,
     PoopSanctuary,
-    AVP
+    AVP,
+    Blood
 )
 from DataModule import Coord
 
