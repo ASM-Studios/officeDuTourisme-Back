@@ -1,16 +1,14 @@
 {
     "Coordoninate" :{
-        "x": 0,
-        "y": 0
+        "lat": 0,
+        "lng": 0
     },
     "Question" : {
-        "type": "slider",
-        "prompt": "...",
-        "interval": {
-            "min": 0,
-            "max": 8
-        },
-        "reponse": 6,
-        "points": 2
+        "type": "qcm",
+        "prompts": [ {
+            "prompt": "...",
+            "valid": true,
+            "points": 2
+        } ]
     }
 }
