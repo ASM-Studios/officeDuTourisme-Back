@@ -2,6 +2,7 @@ from DataModule import (
     AData,
     Hair,
     StarHouse,
+    PoopSanctuary,
     AVP
 )
 from DataModule import Coord
@@ -12,6 +13,7 @@ class Core:
         self.__datasets: list[AData] = [
             Hair('Hair'),
             StarHouse('StarHouse'),
+            PoopSanctuary('PoopSanctuary'),
             AVP('AVP')
         ]
 
