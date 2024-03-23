@@ -8,8 +8,7 @@ from .Seveso import Seveso
 from .Radar import Radar
 from .Blood import Blood
 from .VaccinCenter import VaccinCenter
-from .Blood import Blood
 from .FiveG import FiveG
 from .Speed import Speed
 
-__all__ = [Coord, AData, Hair, StarHouse, PoopSanctuary, AVP, Blood, FiveG, Speed, Seveso, Radar, Blood, VaccinCenter]
+__all__ = [Coord, AData, Hair, StarHouse, PoopSanctuary, AVP, Blood, FiveG, Speed, Seveso, Radar, VaccinCenter]

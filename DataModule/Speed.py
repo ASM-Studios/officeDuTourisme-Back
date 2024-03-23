@@ -24,4 +24,4 @@ class SpeedDataSet(DataSet):
         return 2
 
     def __str__(self) -> str:
-        return "le " + self.__dict__.get('date') + ", il y a eu un exces de vitesse à " + str(self.distance) + "d'ici."
+        return "le " + self.__dict__.get('date') + ", il y a eu un exces de vitesse à " + str(self.distance) + " d'ici."

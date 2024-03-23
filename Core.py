@@ -30,7 +30,7 @@ class Core:
             Seveso('Seveso'),
             Radar('Radar'),
             Blood('Blood'),
-            # VaccinCenter('VaccinCenter')
+            VaccinCenter('VaccinCenter')
         ]
 
     def getByCoord(self, vec: dict) -> dict:
