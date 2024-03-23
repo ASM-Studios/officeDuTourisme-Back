@@ -29,13 +29,13 @@ class PoopSanctuaryDataSet(DataSet):
     def __str__(self) -> str:
         return random.choice([
             "Les toilettes publiques de la métropole de Lyon les plus proches se trouvent à environ " + str(self.distance) + " kilomètres. Mastercacass.",
-            "À proximité, vous trouverez les toilettes publiques de la métropole de Lyon, situées à environ " + str(self.distance) + " kilomètres. Mastercacass.",
-            "Il y a des toilettes publiques de la métropole de Lyon dans les environs, à une distance d'environ " + str(self.distance) + " kilomètres. Mastercacass.",
-            "Vous pouvez trouver les toilettes publiques de la métropole de Lyon à proximité, à environ " + str(self.distance) + " kilomètres. Mastercacass.",
-            "Des toilettes publiques de la métropole de Lyon sont présentes à proximité, à environ " + str(self.distance) + " kilomètres. Mastercacass.",
-            "À cet endroit, les toilettes publiques de la métropole de Lyon sont disponibles à une distance d'environ " + str(self.distance) + " kilomètres. Mastercacass.",
-            "À proximité, les toilettes publiques de la métropole de Lyon vous attendent à une distance d'environ " + str(self.distance) + " kilomètres. Mastercacass.",
-            "Les toilettes publiques de la métropole de Lyon sont établies dans les environs, à environ " + str(self.distance) + " kilomètres. Mastercacass.",
-            "Il y a des toilettes publiques de la métropole de Lyon non loin d'ici, à environ " + str(self.distance) + " kilomètres. Mastercacass.",
-            "À quelques pas d'ici, vous trouverez les toilettes publiques de la métropole de Lyon à une distance d'environ " + str(self.distance) + " kilomètres. Mastercacass."
+            "Vous trouverez les toilettes publiques de la métropole de Lyon, situées à environ " + str(self.distance) + " kilomètres. Mastercacass.",
+            "Il y a des toilettes publiques de la métropole de Lyon, à une distance d'environ " + str(self.distance) + " kilomètres. Mastercacass.",
+            "Vous pouvez trouver les toilettes publiques de la métropole de Lyon à environ " + str(self.distance) + " kilomètres. Mastercacass.",
+            "Des toilettes publiques de la métropole de Lyon sont présentes à environ " + str(self.distance) + " kilomètres. Mastercacass.",
+            "Des toilettes publiques de la métropole de Lyon sont disponibles à une distance d'environ " + str(self.distance) + " kilomètres. Mastercacass.",
+            "Les toilettes publiques de la métropole de Lyon vous attendent à une distance d'environ " + str(self.distance) + " kilomètres. Mastercacass.",
+            "Les toilettes publiques de la métropole de Lyon sont établies à environ " + str(self.distance) + " kilomètres. Mastercacass.",
+            "Il y a des toilettes publiques de la métropole de Lyon à environ " + str(self.distance) + " kilomètres. Mastercacass.",
+            "Vous trouverez les toilettes publiques de la métropole de Lyon à une distance d'environ " + str(self.distance) + " kilomètres. Mastercacass."
         ])
