@@ -29,14 +29,14 @@ class StarHouseDataSet(DataSet):
 
     def __str__(self) -> str:
         return random.choice([
-            "A " + str(self.distance) + ", cet endroit était le lieu de résidence de l'éminent " + self.prompt + ".",
-            "A " + str(self.distance) + ", a vécu l'illustre " + self.prompt + ".",
-            "A " + str(self.distance) + ", c'est ici que l'illustre " + self.prompt + " avait élu domicile.",
-            "A " + str(self.distance) + ", l'éminent " + self.prompt + " a résidé en ce lieu.",
-            "A " + str(self.distance) + ", nous retrouvons la demeure de l'illustre " + self.prompt + ".",
-            "L'illustre " + self.prompt + " avait choisi de vivre à", str(self.distance), " d'ici."
-            "A " + str(self.distance) + ", c'est ici que résidait l'éminent " + self.prompt + ".",
-            "A " + str(self.distance) + ", en ce lieu, a vécu l'illustre " + self.prompt + ".",
-            "A " + str(self.distance) + ", cet endroit a été la résidence de l'éminent " + self.prompt + ".",
-            "A " + str(self.distance) + " résidait l'illustre " + self.prompt + "."
+            "A " + str(self.distance) + " kilomètres, cet endroit était le lieu de résidence de l'éminent " + self.prompt + ".",
+            "A " + str(self.distance) + " kilomètres, a vécu l'illustre " + self.prompt + ".",
+            "A " + str(self.distance) + " kilomètres, c'est ici que l'illustre " + self.prompt + " avait élu domicile.",
+            "A " + str(self.distance) + " kilomètres, l'éminent " + self.prompt + " a résidé en ce lieu.",
+            "A " + str(self.distance) + " kilomètres, nous retrouvons la demeure de l'illustre " + self.prompt + ".",
+            "L'illustre " + self.prompt + " avait choisi de vivre à", str(self.distance), " kilomètres d'ici."
+            "A " + str(self.distance) + " kilomètres, c'est ici que résidait l'éminent " + self.prompt + ".",
+            "A " + str(self.distance) + " kilomètres, en ce lieu, a vécu l'illustre " + self.prompt + ".",
+            "A " + str(self.distance) + " kilomètres, cet endroit a été la résidence de l'éminent " + self.prompt + ".",
+            "A " + str(self.distance) + " kilomètres résidait l'illustre " + self.prompt + "."
         ])
