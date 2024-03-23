@@ -20,9 +20,7 @@ class AData(ABC):
             latitude_index = next((i for i, header in enumerate(headers) if 'latitude' in header.lower()), None)
             finds = sorted([(Coord.distance(Coord(float(row[longitude_index]), float(row[latitude_index])), vec2), row) for row in set],  key=lambda x: x[0])[:size]
             type: object = self.dataSetType
-            print(finds)
             prompts: list[DataSet] = [str(type(**self.__formatType(headers, data[1], data[0]))) for data in finds]
-            print(type)
         return [
             {"prompt": prompt, "valid": True, "points": type.points()}  for prompt in prompts
         ]
