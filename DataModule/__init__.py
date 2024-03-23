@@ -3,5 +3,9 @@ from .Coord import Coord
 from .AData import AData
 from .StarHouse import StarHouse
 from .AVP import AVP
+from .Seveso import Seveso
+from .Radar import Radar
+from .Blood import Blood
+from .VaccinCenter import VaccinCenter
 
-__all__ = [Coord, AData, Hair, StarHouse, AVP]
+__all__ = [Coord, AData, Hair, StarHouse, AVP, Seveso, Radar, Blood, VaccinCenter]

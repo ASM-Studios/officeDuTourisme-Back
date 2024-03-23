@@ -2,7 +2,11 @@ from DataModule import (
     AData,
     Hair,
     StarHouse,
-    AVP
+    AVP,
+    Seveso,
+    Radar,
+    Blood,
+    VaccinCenter
 )
 from DataModule import Coord
 import random
@@ -13,7 +17,11 @@ class Core:
         self.__datasets: list[AData] = [
             Hair('Hair'),
             StarHouse('StarHouse'),
-            AVP('AVP')
+            AVP('AVP'),
+            Seveso('Seveso'),
+            Radar('Radar'),
+            Blood('Blood'),
+            VaccinCenter('VaccinCenter')
         ]
 
     def getByCoord(self, vec: dict) -> dict:
