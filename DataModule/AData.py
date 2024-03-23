@@ -12,7 +12,7 @@ class AData(ABC):
         if not os.path.exists(self.__filePath):
             raise Exception("Data set" + self.__filePath + " not found")
 
-    def extractByCoord(self, vec2: Coord, size: int = 5) -> list[DataSet]:
+    def extractByCoord(self, vec2: Coord, size: int = 5) -> list[dict]:
         with open(self.__filePath, "r") as f:
             set = csv.reader(f)
             headers = next(set)
@@ -20,9 +20,14 @@ class AData(ABC):
             latitude_index = next((i for i, header in enumerate(headers) if 'latitude' in header.lower()), None)
             finds = sorted([(Coord.distance(Coord(float(row[longitude_index]), float(row[latitude_index])), vec2), row) for row in set],  key=lambda x: x[0])[:size]
             type: object = self.dataSetType
-        return [str(type(**self.__formatType(headers, data[1], data[0]))) for data in finds]
+            print(finds)
+            prompts: list[DataSet] = [str(type(**self.__formatType(headers, data[1], data[0]))) for data in finds]
+            print(type)
+        return [
+            {"prompt": prompt, "valid": True, "points": type.points()}  for prompt in prompts
+        ]
 
-    def extractRandom(self, size = 5) -> list[DataSet]:
+    def extractRandom(self, size = 5) -> list[dict]:
         with open(self.__filePath, "r") as f:
             data_reader = csv.reader(f)
             headers = next(data_reader)
@@ -32,9 +37,10 @@ class AData(ABC):
             random_rows = random.sample(data, min(size, len(data)))
             # Format the selected rows into DataSet objects
             type: object = self.dataSetType
-            formatted_data = [str(type(**self.__formatType(headers, row, None))) for row in random_rows]
-
-        return formatted_data
+            prompts: list[DataSet] = [str(type(**self.__formatType(headers, row, None))) for row in random_rows]
+        return [
+            {"prompt": prompt, "valid": False, "points": type.points()} for prompt in prompts
+        ]
 
     @staticmethod
     def __formatType(headers: list[str], row: list[str], distance: Optional[float]) -> dict:
