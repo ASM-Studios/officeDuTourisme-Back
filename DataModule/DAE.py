@@ -17,15 +17,15 @@ class DAE(AData):
 class DAEDataSet(DataSet):
     def __init__(self, distance=None, **kwargs) -> None:
         super().__init__(**kwargs)
+        if self.distance is not None:
+           self.distance = random.uniform(0, 30)
+        self.distance = round(random.uniform(0, 30), 2)
 
     @staticmethod
     def points() -> int:
         return 5
 
     def __str__(self) -> str:
-        if self.self.distance is not None:
-            self.self.distance = random.uniform(0, 30)
-        self.self.distance = round(random.uniform(0, 30), 2)
         return random.choice([
             "Une DAE est proche, à une self.distance d'environ " + str(self.distance) + " kilomètres.",
             "À proximité, vous trouverez une DAE, située à environ " + str(self.distance) + " kilomètres.",

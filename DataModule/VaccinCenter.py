@@ -26,9 +26,6 @@ class VaccinCenterDataSet(DataSet):
         return 5
 
     def __str__(self) -> str:
-        if self.distance is not None:
-            self.distance = random.uniform(0, 30)
-        self.distance = round(random.uniform(0, 30), 2)
         return random.choice([
             "Il y a un centre de vaccination à proximité, à une distance d'environ " + str(self.distance) + " kilomètres.",
             "Un centre de vaccination est situé à proximité de cet endroit, à environ " + str(self.distance) + " kilomètres.",
