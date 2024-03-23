@@ -11,7 +11,6 @@ from DataModule import (
     Blood,
     FiveG,
     Speed,
-    DAE
 )
 from DataModule import Coord
 import random
@@ -31,8 +30,7 @@ class Core:
             Seveso('Seveso'),
             Radar('Radar'),
             Blood('Blood'),
-            VaccinCenter('VaccinCenter'),
-            DAE('DAE')
+            VaccinCenter('VaccinCenter')
         ]
 
     def getByCoord(self, vec: dict) -> dict:
