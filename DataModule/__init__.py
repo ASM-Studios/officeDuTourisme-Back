@@ -10,6 +10,5 @@ from .Blood import Blood
 from .VaccinCenter import VaccinCenter
 from .FiveG import FiveG
 from .Speed import Speed
-from .DAE import DAE
 
-__all__ = [Coord, AData, Hair, StarHouse, PoopSanctuary, AVP, Blood, FiveG, Speed, Seveso, Radar, VaccinCenter, DAE]
+__all__ = [Coord, AData, Hair, StarHouse, PoopSanctuary, AVP, Blood, FiveG, Speed, Seveso, Radar, VaccinCenter]

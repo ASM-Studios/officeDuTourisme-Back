@@ -16,8 +16,12 @@ class StarHouse(AData):
         pass
 
 class StarHouseDataSet(DataSet):
-    def __init__(self, **kwargs) -> None:
+    def __init__(self, distance=None, **kwargs) -> None:
         super().__init__(**kwargs)
+        self.distance = distance
+        if self.distance is None:
+            self.distance = random.uniform(0, 30)
+        self.distance = round(self.distance, 2)
 
     @staticmethod
     def points() -> int:
@@ -25,14 +29,14 @@ class StarHouseDataSet(DataSet):
 
     def __str__(self) -> str:
         return random.choice([
-            "Cet endroit était le lieu de résidence de l'éminent " + self.prompt + ".",
-            "Ici, a vécu l'illustre " + self.prompt + ".",
-            "C'est ici que l'illustre " + self.prompt + " avait élu domicile.",
-            "L'éminent " + self.prompt + " a résidé en ce lieu.",
-            "À cet endroit, nous retrouvons la demeure de l'illustre " + self.prompt + ".",
-            "L'illustre " + self.prompt + " avait choisi de vivre ici.",
-            "C'est ici que résidait l'éminent " + self.prompt + ".",
-            "En ce lieu, a vécu l'illustre " + self.prompt + ".",
-            "Cet endroit a été la résidence de l'éminent " + self.prompt + ".",
-            "Ici résidait l'illustre " + self.prompt + "."
+            "A " + str(self.distance) + ", cet endroit était le lieu de résidence de l'éminent " + self.prompt + ".",
+            "A " + str(self.distance) + ", a vécu l'illustre " + self.prompt + ".",
+            "A " + str(self.distance) + ", c'est ici que l'illustre " + self.prompt + " avait élu domicile.",
+            "A " + str(self.distance) + ", l'éminent " + self.prompt + " a résidé en ce lieu.",
+            "A " + str(self.distance) + ", nous retrouvons la demeure de l'illustre " + self.prompt + ".",
+            "L'illustre " + self.prompt + " avait choisi de vivre à", str(self.distance), " d'ici."
+            "A " + str(self.distance) + ", c'est ici que résidait l'éminent " + self.prompt + ".",
+            "A " + str(self.distance) + ", en ce lieu, a vécu l'illustre " + self.prompt + ".",
+            "A " + str(self.distance) + ", cet endroit a été la résidence de l'éminent " + self.prompt + ".",
+            "A " + str(self.distance) + " résidait l'illustre " + self.prompt + "."
         ])

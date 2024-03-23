@@ -11,7 +11,6 @@ from DataModule import (
     Blood,
     FiveG,
     Speed,
-    DAE
 )
 from DataModule import Coord
 import random
@@ -31,8 +30,7 @@ class Core:
             Seveso('Seveso'),
             Radar('Radar'),
             Blood('Blood'),
-            VaccinCenter('VaccinCenter'),
-            DAE('DAE')
+            VaccinCenter('VaccinCenter')
         ]
 
     def getByCoord(self, vec: dict) -> dict:
@@ -40,7 +38,9 @@ class Core:
         unvalids = []
         total = []
         vec = Coord(float(vec['lng']), float(vec['lat']))
-        random.shuffle([valids.extend(e.extractByCoord(vec)) for e in self.__datasets])
+        random.shuffle(self.__datasets)
+        random.shuffle([valids.extend(e.extractByCoord(vec)) for e in self.__datasets[:7]])
+        random.shuffle(self.__datasets)
         random.shuffle([unvalids.extend(e.extractRandom()) for e in self.__datasets])
         valids.extend(unvalids)
         random.shuffle(valids)

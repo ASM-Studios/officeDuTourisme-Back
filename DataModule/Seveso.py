@@ -19,16 +19,14 @@ class SevesoDataSet(DataSet):
         super().__init__(**kwargs)
         self.distance = distance
         if self.distance is None:
-            self.distance = round(random.uniform(0, 30), 2)
+            self.distance = random.uniform(0, 30)
+        self.distance = round(self.distance, 2)
 
     @staticmethod
     def points() -> int:
         return 5
 
     def __str__(self) -> str:
-        if self.distance is not None:
-            self.distance = random.uniform(0, 30)
-        self.distance = round(random.uniform(0, 30), 2)
         return random.choice([
             "Une installation Seveso est proche, à une distance d'environ " + str(self.distance) + " kilomètres.",
             "À proximité, vous trouverez une installation Seveso, située à environ " + str(self.distance) + " kilomètres.",
