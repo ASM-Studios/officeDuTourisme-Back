@@ -29,6 +29,9 @@ class AVPDataSet(DataSet):
         return 5
 
     def __str__(self) -> str:
+        if self.distance is not None:
+            self.distance = random.uniform(0, 30)
+        self.distance = round(random.uniform(0, 30), 2)
         return random.choice([
             "À moins de " + str(self.distance) + " kilomètres d'ici, un accident impliquant des blessés s'est produit sur la voie publique.",
             "Près d'ici, à une distance d'environ " + str(self.distance) + " kilomètres, un accident corporel a eu lieu sur la voie publique.",

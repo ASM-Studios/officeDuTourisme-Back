@@ -18,7 +18,13 @@ class StarHouse(AData):
 class StarHouseDataSet(DataSet):
     def __init__(self, **kwargs) -> None:
         super().__init__(**kwargs)
-        self.__star_house_info = [
+
+    @staticmethod
+    def points() -> int:
+        return 3
+
+    def __str__(self) -> str:
+        return random.choice([
             "Cet endroit était le lieu de résidence de l'éminent " + self.__dict__.get('prompt') + ".",
             "Ici, a vécu l'illustre " + self.__dict__.get('prompt') + ".",
             "C'est ici que l'illustre " + self.__dict__.get('prompt') + " avait élu domicile.",
@@ -29,11 +35,4 @@ class StarHouseDataSet(DataSet):
             "En ce lieu, a vécu l'illustre " + self.__dict__.get('prompt') + ".",
             "Cet endroit a été la résidence de l'éminent " + self.__dict__.get('prompt') + ".",
             "Ici résidait l'illustre " + self.__dict__.get('prompt') + "."
-        ]
-
-    @staticmethod
-    def points() -> int:
-        return 3
-
-    def __str__(self) -> str:
-        return random.choice(self.__star_house_info)
+        ])

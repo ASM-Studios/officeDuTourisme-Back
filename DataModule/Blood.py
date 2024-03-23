@@ -1,6 +1,6 @@
 from .AData import AData
 from .DataSet import DataSet
-import math
+import random
 
 class Blood(AData):
     def __init__(self, filePath: str) -> None:
@@ -23,4 +23,15 @@ class BloodDataSet(DataSet):
         return 5
 
     def __str__(self) -> str:
-        return "Il y'a un centre de collecte de sang à proximité"
+        return random.choice([
+            "À proximité, vous trouverez un centre de collecte de sang.",
+            "Un centre de collecte de sang se situe à proximité de cet endroit.",
+            "Il y a un centre de collecte de sang dans les environs.",
+            "Vous pouvez trouver un centre de collecte de sang à proximité.",
+            "Un centre de collecte de sang est présent à proximité.",
+            "À cet endroit, un centre de collecte de sang est disponible.",
+            "À proximité, un centre de collecte de sang vous attend.",
+            "Un centre de collecte de sang est établi dans les environs.",
+            "Il y a un centre de collecte de sang non loin d'ici.",
+            "À quelques pas d'ici, vous trouverez un centre de collecte de sang."
+        ])
