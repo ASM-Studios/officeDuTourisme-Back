@@ -38,7 +38,9 @@ class Core:
         unvalids = []
         total = []
         vec = Coord(float(vec['lng']), float(vec['lat']))
-        random.shuffle([valids.extend(e.extractByCoord(vec)) for e in self.__datasets])
+        random.shuffle(self.__datasets)
+        random.shuffle([valids.extend(e.extractByCoord(vec)) for e in self.__datasets[:7]])
+        random.shuffle(self.__datasets)
         random.shuffle([unvalids.extend(e.extractRandom()) for e in self.__datasets])
         valids.extend(unvalids)
         random.shuffle(valids)

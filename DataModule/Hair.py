@@ -15,9 +15,12 @@ class Hair(AData):
         pass
 
 class HairDataSet(DataSet):
-    def __init__(self, name, **kwargs) -> None:
+    def __init__(self, distance=None, **kwargs) -> None:
         super().__init__(**kwargs)
-        self.name = name
+        self.distance = distance
+        if self.distance is None:
+            self.distance = random.uniform(0, 30)
+        self.distance = round(self.distance, 2)
 
     @staticmethod
     def points() -> int:

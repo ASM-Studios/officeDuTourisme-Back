@@ -19,7 +19,8 @@ class PoopSanctuaryDataSet(DataSet):
         super().__init__(**kwargs)
         self.distance = distance
         if self.distance is None:
-            self.distance = round(random.uniform(0, 30), 2)
+            self.distance = random.uniform(0, 30)
+        self.distance = round(self.distance, 2)
 
     @staticmethod
     def points() -> int:
